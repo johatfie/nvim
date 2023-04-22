@@ -52,6 +52,7 @@ keymap("n", "zk", "O<ESC>", opts)
 keymap("n", "n", "nzz", opts)
 keymap("n", "N", "Nzz", opts)
 
+keymap("n", "<Left>", ":NvimTreeToggle<CR>", opts)
 
 -- Insert --
 -- Press jj fast to enter

@@ -37,7 +37,8 @@ local options = {
     undolevels = 10000,
     updatetime = 300,                        -- faster completion (4000ms default)
     wrap = true,                             -- display lines as one long line
-    writebackup = true,                      -- if a file is being edited by another program (or was written to file while editing with another program), it is not allowed to be edited
+    writebackup = true,                      -- if a file is being edited by another program (or was written to file
+                                             -- while editing with another program), it is not allowed to be edited
 
 }
 
