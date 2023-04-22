@@ -3,7 +3,7 @@ local servers = {
     "lua_ls",
     -- "lua-language-server",
     -- "lua-lsp",
-    "pyright",
+    -- "pyright",
     "jsonls",
     -- "java-language-server",
 }

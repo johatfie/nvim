@@ -42,6 +42,7 @@ nvim_tree.setup {
         enable = true,
         update_cwd = true,
         ignore_list = {},
+        update_root = true,  -- project support
     },
     git = {
         enable = true,
@@ -100,5 +101,9 @@ nvim_tree.setup {
                 },
             }
         }
-    }
+    },
+
+    -- project support
+    sync_root_with_cwd = true,
+    respect_buf_cwd = true,
 }
