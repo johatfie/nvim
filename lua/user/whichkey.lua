@@ -79,21 +79,21 @@ local opts = {
 }
 
 local mappings = {
-    ["/"] = { "<cmd>lua require(\"Comment.api\").toggle_current_linewise()<CR>", "Comment" },
+    -- ["/"] = { "<cmd>lua require(\"Comment.api\").toggle_current_linewise()<CR>", "Comment" },
     ["a"] = { "<cmd>Alpha<cr>", "Alpha" },
-    ["b"] = {
-        "<cmd>lua require('telescope.builtin').buffers(require('telescope.themes').get_dropdown{previewer = false})<cr>",
-        "Buffers",
-    },
-    ["e"] = { "<cmd>NvimTreeToggle<cr>", "Explorer" },
+    -- ["b"] = {
+    --     "<cmd>lua require('telescope.builtin').buffers(require('telescope.themes').get_dropdown{previewer = false})<cr>",
+    --     "Buffers",
+    -- },
+    -- ["e"] = { "<cmd>NvimTreeToggle<cr>", "Explorer" },
     ["w"] = { "<cmd>w!<CR>", "Save" },
     ["q"] = { "<cmd>q!<CR>", "Quit" },
-    ["c"] = { "<cmd>Bdelete!<CR>", "Close Buffer" },
-    ["h"] = { "<cmd>nohlsearch<CR>", "No Highlight" },
-    ["f"] = {
-        "<cmd>lua require('telescope.builtin').find_files(require('telescope.themes').get_dropdown{previewer = false})<cr>",
-        "Find files",
-    },
+    -- ["c"] = { "<cmd>Bdelete!<CR>", "Close Buffer" },
+    -- ["h"] = { "<cmd>nohlsearch<CR>", "No Highlight" },
+    -- ["f"] = {
+    --     "<cmd>lua require('telescope.builtin').find_files(require('telescope.themes').get_dropdown{previewer = false})<cr>",
+    --     "Find files",
+    -- },
     ["F"] = { "<cmd>Telescope live_grep theme=ivy<cr>", "Find Text" },
     ["P"] = { "<cmd>Telescope projects<cr>", "Projects" },
 
@@ -108,7 +108,7 @@ local mappings = {
 
     g = {
         name = "Git",
-        g = { "<cmd>lua _LAZYGIT_TOGGLE()<CR>", "Lazygit" },
+        -- g = { "<cmd>lua _LAZYGIT_TOGGLE()<CR>", "Lazygit" },
         j = { "<cmd>lua require 'gitsigns'.next_hunk()<cr>", "Next Hunk" },
         k = { "<cmd>lua require 'gitsigns'.prev_hunk()<cr>", "Prev Hunk" },
         l = { "<cmd>lua require 'gitsigns'.blame_line()<cr>", "Blame" },
@@ -129,37 +129,43 @@ local mappings = {
         },
     },
 
-    l = {
-        name = "LSP",
-        a = { "<cmd>lua vim.lsp.buf.code_action()<cr>", "Code Action" },
-        d = {
-            "<cmd>Telescope lsp_document_diagnostics<cr>",
-            "Document Diagnostics",
-        },
-        w = {
-            "<cmd>Telescope lsp_workspace_diagnostics<cr>",
-            "Workspace Diagnostics",
-        },
-        f = { "<cmd>lua vim.lsp.buf.formatting()<cr>", "Format" },
-        i = { "<cmd>LspInfo<cr>", "Info" },
-        I = { "<cmd>LspInstallInfo<cr>", "Installer Info" },
-        j = {
-            "<cmd>lua vim.lsp.diagnostic.goto_next()<CR>",
-            "Next Diagnostic",
-        },
-        k = {
-            "<cmd>lua vim.lsp.diagnostic.goto_prev()<cr>",
-            "Prev Diagnostic",
-        },
-        l = { "<cmd>lua vim.lsp.codelens.run()<cr>", "CodeLens Action" },
-        q = { "<cmd>lua vim.lsp.diagnostic.set_loclist()<cr>", "Quickfix" },
-        r = { "<cmd>lua vim.lsp.buf.rename()<cr>", "Rename" },
-        s = { "<cmd>Telescope lsp_document_symbols<cr>", "Document Symbols" },
-        S = {
-            "<cmd>Telescope lsp_dynamic_workspace_symbols<cr>",
-            "Workspace Symbols",
-        },
+    -- l = {
+    --     name = "LSP",
+    --     a = { "<cmd>lua vim.lsp.buf.code_action()<cr>", "Code Action" },
+    --     d = {
+    --         "<cmd>Telescope lsp_document_diagnostics<cr>",
+    --         "Document Diagnostics",
+    --     },
+    --     w = {
+    --         "<cmd>Telescope lsp_workspace_diagnostics<cr>",
+    --         "Workspace Diagnostics",
+    --     },
+    --     f = { "<cmd>lua vim.lsp.buf.formatting()<cr>", "Format" },
+    --     i = { "<cmd>LspInfo<cr>", "Info" },
+    --     I = { "<cmd>LspInstallInfo<cr>", "Installer Info" },
+    --     j = {
+    --         "<cmd>lua vim.lsp.diagnostic.goto_next()<CR>",
+    --         "Next Diagnostic",
+    --     },
+    --     k = {
+    --         "<cmd>lua vim.lsp.diagnostic.goto_prev()<cr>",
+    --         "Prev Diagnostic",
+    --     },
+    --     l = { "<cmd>lua vim.lsp.codelens.run()<cr>", "CodeLens Action" },
+    --     q = { "<cmd>lua vim.lsp.diagnostic.set_loclist()<cr>", "Quickfix" },
+    --     r = { "<cmd>lua vim.lsp.buf.rename()<cr>", "Rename" },
+    --     s = { "<cmd>Telescope lsp_document_symbols<cr>", "Document Symbols" },
+    --     S = {
+    --         "<cmd>Telescope lsp_dynamic_workspace_symbols<cr>",
+    --         "Workspace Symbols",
+    --     },
+    -- },
+
+    f = {
+        name = "Find",
+        u = { "<cmd>Telescope undo<cr>", "Undo" },
     },
+
     s = {
         name = "Search",
         b = { "<cmd>Telescope git_branches<cr>", "Checkout branch" },
@@ -174,10 +180,10 @@ local mappings = {
 
     t = {
         name = "Terminal",
-        n = { "<cmd>lua _NODE_TOGGLE()<cr>", "Node" },
-        u = { "<cmd>lua _NCDU_TOGGLE()<cr>", "NCDU" },
+        -- n = { "<cmd>lua _NODE_TOGGLE()<cr>", "Node" },
+        -- u = { "<cmd>lua _NCDU_TOGGLE()<cr>", "NCDU" },
         t = { "<cmd>lua _HTOP_TOGGLE()<cr>", "Htop" },
-        p = { "<cmd>lua _PYTHON_TOGGLE()<cr>", "Python" },
+        -- p = { "<cmd>lua _PYTHON_TOGGLE()<cr>", "Python" },
         f = { "<cmd>ToggleTerm direction=float<cr>", "Float" },
         h = { "<cmd>ToggleTerm size=10 direction=horizontal<cr>", "Horizontal" },
         v = { "<cmd>ToggleTerm size=80 direction=vertical<cr>", "Vertical" },
@@ -193,7 +199,7 @@ local vopts = {
     nowait = true, -- use `nowait` when creating keymaps
 }
 local vmappings = {
-    ["/"] = { "<ESC><CMD>lua require(\"Comment.api\").toggle_linewise_op(vim.fn.visualmode())<CR>", "Comment" },
+    -- ["/"] = { "<ESC><CMD>lua require(\"Comment.api\").toggle_linewise_op(vim.fn.visualmode())<CR>", "Comment" },
 }
 
 which_key.setup(setup)

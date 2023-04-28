@@ -46,7 +46,11 @@ keymap("n", "zj", "o<ESC>", opts)
 keymap("n", "zk", "O<ESC>", opts)
 
 -- find git conflict markers
--- keymap("n", "<leader>C", "/^\(<\\|=\\|>\)\{7\}\([^=].\+\)\?$<CR>", opts)
+keymap("n", "<leader>C", "/^\\(<\\|=\\|>\\)\\{7\\}\\([^=].\\+\\)\\?$<CR>", opts)
+
+-- <<<<<<< head
+-- =======
+-- >>>>>>> uuid
 
 -- Auto center on matched string
 keymap("n", "n", "nzz", opts)

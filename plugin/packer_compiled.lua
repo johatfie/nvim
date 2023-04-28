@@ -84,6 +84,11 @@ _G.packer_plugins = {
     path = "/Users/hatfiej3/.local/share/nvim/site/pack/packer/start/alpha-nvim",
     url = "https://github.com/goolord/alpha-nvim"
   },
+  ["bash-support.vim"] = {
+    loaded = true,
+    path = "/Users/hatfiej3/.local/share/nvim/site/pack/packer/start/bash-support.vim",
+    url = "https://github.com/vim-scripts/bash-support.vim"
+  },
   ["bufferline.nvim"] = {
     loaded = true,
     path = "/Users/hatfiej3/.local/share/nvim/site/pack/packer/start/bufferline.nvim",
@@ -164,6 +169,11 @@ _G.packer_plugins = {
     path = "/Users/hatfiej3/.local/share/nvim/site/pack/packer/start/mason.nvim",
     url = "https://github.com/williamboman/mason.nvim"
   },
+  nerdcommenter = {
+    loaded = true,
+    path = "/Users/hatfiej3/.local/share/nvim/site/pack/packer/start/nerdcommenter",
+    url = "https://github.com/scrooloose/nerdcommenter"
+  },
   ["null-ls.nvim"] = {
     loaded = true,
     path = "/Users/hatfiej3/.local/share/nvim/site/pack/packer/start/null-ls.nvim",
@@ -224,10 +234,20 @@ _G.packer_plugins = {
     path = "/Users/hatfiej3/.local/share/nvim/site/pack/packer/start/project.nvim",
     url = "https://github.com/ahmedkhalf/project.nvim"
   },
+  ["telescope-fzf-native.nvim"] = {
+    loaded = true,
+    path = "/Users/hatfiej3/.local/share/nvim/site/pack/packer/start/telescope-fzf-native.nvim",
+    url = "https://github.com/nvim-telescope/telescope-fzf-native.nvim"
+  },
   ["telescope-media-files.nvim"] = {
     loaded = true,
     path = "/Users/hatfiej3/.local/share/nvim/site/pack/packer/start/telescope-media-files.nvim",
     url = "https://github.com/nvim-telescope/telescope-media-files.nvim"
+  },
+  ["telescope-undo.nvim"] = {
+    loaded = true,
+    path = "/Users/hatfiej3/.local/share/nvim/site/pack/packer/start/telescope-undo.nvim",
+    url = "https://github.com/debugloop/telescope-undo.nvim"
   },
   ["telescope.nvim"] = {
     loaded = true,
@@ -243,6 +263,21 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/hatfiej3/.local/share/nvim/site/pack/packer/start/vim-bbye",
     url = "https://github.com/moll/vim-bbye"
+  },
+  ["vim-better-whitespace"] = {
+    loaded = true,
+    path = "/Users/hatfiej3/.local/share/nvim/site/pack/packer/start/vim-better-whitespace",
+    url = "https://github.com/ntpeters/vim-better-whitespace"
+  },
+  ["vim-repeat"] = {
+    loaded = true,
+    path = "/Users/hatfiej3/.local/share/nvim/site/pack/packer/start/vim-repeat",
+    url = "https://github.com/tpope/vim-repeat"
+  },
+  ["vim-surround"] = {
+    loaded = true,
+    path = "/Users/hatfiej3/.local/share/nvim/site/pack/packer/start/vim-surround",
+    url = "https://github.com/tpope/vim-surround"
   },
   ["which-key.nvim"] = {
     loaded = true,

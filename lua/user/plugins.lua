@@ -12,7 +12,7 @@ if fn.empty(fn.glob(install_path)) > 0 then
         "https://github.com/wbthomason/packer.nvim",
         install_path,
     }
-    print "Installing packer close and reopen Neovim..."
+    print "Installing packer.  Close and reopen Neovim..."
     vim.cmd [[packadd packer.nvim]]
 end
 
@@ -49,6 +49,7 @@ return packer.startup(function(use)
     use 'kyazdani42/nvim-tree.lua'
     use "akinsho/bufferline.nvim"
     use "moll/vim-bbye"
+    -- use "vim-airline/vim-airline"
     use 'nvim-lualine/lualine.nvim'
     use "akinsho/toggleterm.nvim"
     use "ahmedkhalf/project.nvim"
@@ -56,6 +57,11 @@ return packer.startup(function(use)
     use "lukas-reineke/indent-blankline.nvim"
     use 'goolord/alpha-nvim'
     use "folke/which-key.nvim"
+    use 'ntpeters/vim-better-whitespace'
+    use 'tpope/vim-surround'
+    use 'tpope/vim-repeat'
+    use 'vim-scripts/bash-support.vim'
+    use 'scrooloose/nerdcommenter'
 
     -- Colorschemes
     use "lunarvim/colorschemes" -- A bunch of colorschemes you can try out
@@ -83,7 +89,13 @@ return packer.startup(function(use)
     -- Telescope
     use "nvim-telescope/telescope.nvim"
     use 'nvim-telescope/telescope-media-files.nvim'
-
+    use {'nvim-telescope/telescope-fzf-native.nvim',
+        run = 'make -S. -Bbuild -Dmake_BUILD_TYPE=Release \
+            && make --build build --config Release \
+            && make --install build --prefix build'
+    }
+    -- use {'nvim-telescope/telescope-fzf-native.nvim', run = 'make' }
+    use 'debugloop/telescope-undo.nvim'
 
     -- Treesitter
     use {

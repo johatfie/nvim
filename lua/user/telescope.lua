@@ -4,6 +4,7 @@ if not status_ok then
 end
 
 telescope.load_extension('media_files')
+telescope.load_extension('undo')
 
 local actions = require "telescope.actions"
 
@@ -16,6 +17,8 @@ telescope.setup {
 
     mappings = {
       i = {
+        ["<esc>"] = actions.close,
+
         ["<C-n>"] = actions.cycle_history_next,
         ["<C-p>"] = actions.cycle_history_prev,
 
@@ -94,7 +97,21 @@ telescope.setup {
         -- defaults to {"png", "jpg", "mp4", "webm", "pdf"}
         filetypes = {"png", "webp", "jpg", "jpeg"},
         find_cmd = "rg" -- find command (defaults to `fd`)
-      }
+    },
+    undo = {
+        side_by_side = true,
+        layout_strategy = "vertical",
+        layout_config = {
+            preview_height = 0.8,
+        },
+    },
+    fzf = {
+      fuzzy = true,                    -- false will only do exact matching
+      override_generic_sorter = true,  -- override the generic sorter
+      override_file_sorter = true,     -- override the file sorter
+      case_mode = "smart_case",        -- or "ignore_case" or "respect_case"
+                                       -- the default case_mode is "smart_case"
+    },
     -- Your extension configuration goes here:
     -- extension_name = {
     --   extension_config_key = value,
@@ -103,3 +120,17 @@ telescope.setup {
   },
 }
 
+local builtin_status_ok, builtin = pcall(require, "telescope.builtin")
+if not builtin_status_ok then
+  return
+end
+
+-- local builtin = require('telescope.builtin')
+vim.keymap.set('n', '<leader>ff', builtin.find_files, {})
+vim.keymap.set('n', '<leader>fg', builtin.live_grep, {})
+vim.keymap.set('n', '<leader>fb', builtin.buffers, {})
+vim.keymap.set('n', '<leader>fh', builtin.help_tags, {})
+-- vim.keymap.set('n', '<leader>fu', "<cmd>Telescope undo<cr>")
+
+
+-- telescope.load_extension("fzf")
