@@ -1,20 +1,25 @@
 
 local servers = {
-    "lua_ls",
+    "bashls",
+    "docker_compose_language_service",
+    "dockerls",
+    "gradle_ls",
+    "jsonls",
+    "vimls",
+    "yamlls",
+    -- "java-language-server",
+    -- "jdtls",
+    -- "lemminx",
     -- "lua-language-server",
     -- "lua-lsp",
+    -- "lua_ls",
     -- "pyright",
-    "jsonls",
-    -- "java-language-server",
 }
 
 local settings = {
     ui = {
         border = "none",
         icons = {
-            -- package_installed = "◍",
-            -- package_pending = "◍",
-            -- package_uninstalled = "◍",
             package_installed = "✓",
             package_pending = "➜",
             package_uninstalled = "✗"

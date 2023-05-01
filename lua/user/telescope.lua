@@ -5,6 +5,7 @@ end
 
 telescope.load_extension('media_files')
 telescope.load_extension('undo')
+telescope.load_extension('repo')
 
 local actions = require "telescope.actions"
 

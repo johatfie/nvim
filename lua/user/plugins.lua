@@ -62,6 +62,7 @@ return packer.startup(function(use)
     use 'tpope/vim-repeat'
     use 'vim-scripts/bash-support.vim'
     use 'scrooloose/nerdcommenter'
+    use 'chentoast/marks.nvim'
 
     -- Colorschemes
     use "lunarvim/colorschemes" -- A bunch of colorschemes you can try out
@@ -81,9 +82,9 @@ return packer.startup(function(use)
     use "rafamadriz/friendly-snippets" -- a bunch of snippets to use
 
     -- LSP
-    use "neovim/nvim-lspconfig" -- enable LSP
     use "williamboman/mason.nvim" -- simple to use language server installer
     use "williamboman/mason-lspconfig.nvim" -- simple to use language server installer
+    use "neovim/nvim-lspconfig" -- enable LSP
     use 'jose-elias-alvarez/null-ls.nvim' -- LSP diagnostics and code actions
 
     -- Telescope
@@ -96,6 +97,7 @@ return packer.startup(function(use)
     }
     -- use {'nvim-telescope/telescope-fzf-native.nvim', run = 'make' }
     use 'debugloop/telescope-undo.nvim'
+    use 'cljoly/telescope-repo.nvim'
 
     -- Treesitter
     use {
